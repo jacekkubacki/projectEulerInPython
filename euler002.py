@@ -15,7 +15,7 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
 '''
 Solution using a stack:
 Start with two first terms on the stack.
-To find new term: pop two terms, add them and push back the previous top of the stack and the sum
+To find new term: pop two terms, add them and push back the previous top of the stack and the sum - new term is on the top of the stack now.
 '''
 
 result = 0
