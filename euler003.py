@@ -27,8 +27,3 @@ def primeFactorization (n):
 
 print ("Result:", max(primeFactorization(600851475143)))
 
-
-
-
-
-    
