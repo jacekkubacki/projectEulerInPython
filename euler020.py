@@ -1,5 +1,4 @@
 #!/usr/local/bin/python3
-
 '''
 Factorial digit sum
 Problem 20

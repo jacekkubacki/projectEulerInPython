@@ -1,5 +1,4 @@
 #!/usr/local/bin/python3
-
 '''
 Even Fibonacci numbers
 Problem 2

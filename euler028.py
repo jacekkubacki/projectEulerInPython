@@ -1,5 +1,4 @@
 #!/usr/local/bin/python3
-
 '''
 Number spiral diagonals
 Problem 28
