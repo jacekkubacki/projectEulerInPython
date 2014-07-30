@@ -1,6 +1,7 @@
 #!/usr/local/bin/python3
 
 '''
+Factorial digit sum
 Problem 20
 
 n! means n × (n − 1) × ... × 3 × 2 × 1
