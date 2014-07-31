@@ -17,10 +17,10 @@ Solution:
 The idea is to build all the possible lists of coins in a descending value order.
 We start with list containig the sublists with one coin of each type.
 Then we parse through the list and:
-- remove the sublist if it ends with 1 - it means that the sublist would end with one ore more 1p coins
+- remove the sublist if it ends with 1 - it means that the sublist would end with one or more 1p coins
 - remove the sublist if the sum of the coins equals 200
 - replace current sublist with new sublists created by adding a coin (same or smaller value) to the current sublist
-till the list is empty.
+Repeat the process until the list is empty.
 '''
 
 result = 0
