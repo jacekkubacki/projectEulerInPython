@@ -10,9 +10,10 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 '''
 
 '''
-Solution: instead of using a loop we can simply find the sums of arithmetic progressions
+Solution:
+Instead of using a loop we can simply find the sums of arithmetic progressions
 http://en.wikipedia.org/wiki/Arithmetic_progression
-add the sum for multiplies of 3 and sum for multiplies of 5
+Just add the sum for multiplies of 3 and sum for multiplies of 5
 and substract sum for multiplies of 15 (because numbers such as 15 have been added twice: as a multiply of 3 and as a multiply of 5)
 '''
 
