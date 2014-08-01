@@ -1,6 +1,7 @@
 import math
 
 def primeFactorization (n):
+    """Returns sorted list of prime factors of n"""
     # all the prime factors that are < n are also <= sqrt(n)
     limit = int (math.sqrt(n))
 
@@ -14,3 +15,24 @@ def primeFactorization (n):
             else:
                 return sorted (primeFactorization(limit) + primeFactorization(n//limit))
         limit -= 1
+
+def listOfPrimes (n):
+    """Returns ordered list of primes in range(2,n)"""
+    if n < 2 : return []
+    primeNumbers = [2]
+    
+    for n in range(3, n, 2): # check only odd numbers
+        isPrime = True
+        for p in primeNumbers:
+        # we only want to check the primes <= sqrt(n)
+        # see: http://en.wikipedia.org/wiki/Prime_number#Trial_division
+            if p <= math.sqrt(n):
+                if n % p == 0:
+                    isPrime = False
+                    break
+            else:
+                break
+        if isPrime:
+            primeNumbers.append(n)
+
+    return primeNumbers
