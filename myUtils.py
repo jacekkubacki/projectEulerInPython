@@ -1,5 +1,11 @@
 import math
 
+'''
+primeFactorization() function has been originally written to solve Problem 3
+
+Files using this function:
+euler005.py
+'''
 def primeFactorization (n):
     """Returns sorted list of prime factors of n"""
     # all the prime factors that are < n are also <= sqrt(n)
@@ -16,6 +22,13 @@ def primeFactorization (n):
                 return sorted (primeFactorization(limit) + primeFactorization(n//limit))
         limit -= 1
 
+'''
+listOfPrimes() function has been originally written to solve Problem 7
+
+Files using this function:
+euler010.py
+euler035.py
+'''
 def listOfPrimes (n):
     """Returns ordered list of primes in range(2,n)"""
     if n < 2 : return []
