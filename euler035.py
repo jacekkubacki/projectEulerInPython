@@ -32,7 +32,7 @@ def listOfRotations (n):
         s = s[1:]+s[0]
     return result
     
-circularPrimes = set([2, 3, 5, 7, 11, 13, 17, 31, 37, 71, 73, 79, 97])
+circularPrimes = set([])
 primes = set (listOfPrimes (1000000))
 
 for p in primes:
