@@ -32,7 +32,7 @@ euler035.py
 def listOfPrimes (n):
     """Returns ordered list of primes in range(2,n)"""
     if n < 2 : return []
-    primeNumbers = [2]
+    primeNumbers = []
     
     for n in range(3, n, 2): # check only odd numbers
         isPrime = True
@@ -48,4 +48,4 @@ def listOfPrimes (n):
         if isPrime:
             primeNumbers.append(n)
 
-    return primeNumbers
+    return [2] + primeNumbers

@@ -17,12 +17,12 @@ If it is not possible then n is a prime number and add it to the list.
 
 import math
 
-primeNumbers = [2] 
+primeNumbers = [2]
 n = 3 # start with 3 to skip all even numbers
 
 while len(primeNumbers) < 10001:
     isPrime = True
-    for p in primeNumbers:
+    for p in primeNumbers[1:]: # ignore 2 as we are checking only odd numbers
         # we only want to check the primes <= sqrt(n)
         # see: http://en.wikipedia.org/wiki/Prime_number#Trial_division
         if p <= math.sqrt(n):
