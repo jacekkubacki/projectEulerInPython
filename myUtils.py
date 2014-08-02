@@ -28,6 +28,7 @@ listOfPrimes() function has been originally written to solve Problem 7
 Files using this function:
 euler010.py
 euler035.py
+euler049.py
 '''
 def listOfPrimes (n):
     """Returns ordered list of primes in range(2,n)"""
