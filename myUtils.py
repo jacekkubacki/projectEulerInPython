@@ -29,6 +29,7 @@ Files using this function:
 euler010.py
 euler035.py
 euler049.py
+euler050.py
 '''
 def listOfPrimes (n):
     """Returns ordered list of primes in range(2,n)"""
