@@ -26,5 +26,5 @@ s3 = arithmeticSum(3, 3, (limit-1)//3)
 s5 = arithmeticSum(5, 5, (limit-1)//5)
 s15 = arithmeticSum(15, 15, (limit-1)//15)
 
-print ("Result: ", int(s3+s5-s15))
+print ("Result:", int(s3+s5-s15))
 
