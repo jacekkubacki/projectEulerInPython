@@ -33,21 +33,21 @@ euler050.py
 '''
 def listOfPrimes (n):
     """Returns ordered list of primes in range(2,n)"""
-    if n < 2 : return []
-    primeNumbers = []
-    
-    for n in range(3, n, 2): # check only odd numbers
-        isPrime = True
-        for p in primeNumbers:
-        # we only want to check the primes <= sqrt(n)
-        # see: http://en.wikipedia.org/wiki/Prime_number#Trial_division
-            if p <= math.sqrt(n):
-                if n % p == 0:
-                    isPrime = False
-                    break
-            else:
-                break
-        if isPrime:
-            primeNumbers.append(n)
+    """using linear sieve algorithm: http://edu.i-lo.tarnow.pl/inf/alg/001_search/0012.php"""
+    primes = [True for i in range (0,n)]
+    p = 2
+    while p * p < n:
+        q = p
+        while p * q < n:
+            x = p * q
+            while x < n:
+                primes[x] = False
+                x *= p
+            while True:
+                q += 1
+                if primes[q]: break
+        while True:
+            p += 1
+            if primes[p]: break
 
-    return [2] + primeNumbers
+    return [i for i in range(2,n) if primes[i]]
