@@ -31,16 +31,12 @@ The result will be in the root node.
 
 triangle = []
 
-numberOfRows = 0
 f = open ('triangle.txt', 'r')
-
 for line in f:
     triangle.append(list (map(int, line.split())))
-    numberOfRows += 1
-
 f.close()
     
-for row in range(numberOfRows-1, 0, -1):
+for row in range(len(triangle)-1, 0, -1):
     for column in range (0, len(triangle[row])-1):
         triangle[row-1][column] += max(triangle[row][column:column+2])
 
