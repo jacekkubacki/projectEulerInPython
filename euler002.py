@@ -11,31 +11,16 @@ By starting with 1 and 2, the first 10 terms will be:
 By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
 '''
 
-'''
-Solution using a stack:
-Start with two first terms on the stack.
-To find new term: pop two terms, add them and push back the previous top of the stack and the sum - new term is on the top of the stack now.
-'''
-
+a = 1
+b = 1
 result = 0
 
-stack = [1,1]
-n = 0
-
-while n < 4000000:
-    # pop
-    n1 = stack.pop()
-    n2 = stack.pop()
-
-    n  = n1 + n2
-
-    # push
-    stack.append(n1)
-    stack.append(n)
-
+while b < 4000000:
+    # find next term (b)
+    a,b = b,a+b
     # add even numbers only
-    if n % 2 == 0:
-        result += n
+    if b % 2 == 0:
+        result += b
         
 print ("Result:", result)
     
