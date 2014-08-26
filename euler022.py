@@ -34,10 +34,9 @@ def namescore(s):
 
     return result
 
-
-f = open ('names.txt', 'r')
-data=f.read()
-f.close()
+# with statement with file object: opens file in 'r' mode, closes file on exit
+with open('names.txt') as f:
+    data = f.read()
 
 listOfNames = list(map(dequote, list(str(data).split(','))))
 listOfNames.sort()
