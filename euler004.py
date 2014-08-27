@@ -17,9 +17,8 @@ for x in range (999, limit, -1):
     # x will be always >= y
     for y in range (x, limit, -1):
         p = x * y
-        s = str (p)
-        l = list (s)
-        r = list (s)
+        l = list(str(p))
+        r = list(str(p))
         r.reverse()
         if l == r:
             if palindrome < p:
@@ -27,7 +26,7 @@ for x in range (999, limit, -1):
                 # there is no need to check numbers lower than y
 		# as the product is guaranteed to be smaller than x*y
                 limit = y 
-                # the palindrome cannot be biger for a given x
+                # the palindrome cannot be bigger for a given x
                 break
                 
 print ("Result:", palindrome)
