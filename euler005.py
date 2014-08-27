@@ -24,7 +24,9 @@ factors = Counter()
 
 for n in range (1, 20 + 1):
     f = Counter (primeFactorization(n))
-    # to make sure all new factors are added correctly:
+    # to make sure 'f' factors are added correctly to 'factors':
+    # remove the ones that are already in 'factors' first
+    # and then re-add them along with (possibly) new ones
     factors = (factors - f) + f 
 
 result = 1
