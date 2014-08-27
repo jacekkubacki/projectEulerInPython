@@ -20,6 +20,7 @@ import math
 primeNumbers = [2]
 n = 3 # start with 3 to skip all even numbers
 
+# a better algorithm for finding prime numbers can be found in myUtils.py
 while len(primeNumbers) < 10001:
     isPrime = True
     for p in primeNumbers[1:]: # ignore 2 as we are checking only odd numbers
