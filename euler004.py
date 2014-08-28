@@ -17,10 +17,8 @@ for x in range (999, limit, -1):
     # x will be always >= y
     for y in range (x, limit, -1):
         p = x * y
-        l = list(str(p))
-        r = list(str(p))
-        r.reverse()
-        if l == r:
+        # check if p is the same as reversed p
+        if str(p) == str(p)[::-1]:
             if palindrome < p:
                 palindrome = p
                 # there is no need to check numbers lower than y
