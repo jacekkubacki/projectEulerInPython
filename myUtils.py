@@ -5,6 +5,7 @@ primeFactorization() function has been originally written to solve Problem 3
 
 Files using this function:
 euler005.py
+euler012.py
 '''
 def primeFactorization (n):
     """Returns sorted list of prime factors of n"""

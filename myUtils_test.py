@@ -8,6 +8,14 @@ To run the tests:
 import subprocess
 
 def test_primeFactorization():
+    solution = {'euler005.py' : 'Result: 232792560',\
+                'euler012.py' : 'Result: 76576500'}
+
+    for key, value in solution.items():
+        stdout = str(subprocess.check_output('python3 ' + key, shell = True, universal_newlines=True))
+        assert value in stdout
+
+    
     stdout = str(subprocess.check_output('python3 euler005.py', shell=True, universal_newlines=True))
     assert 'Result: 232792560' in stdout
 
