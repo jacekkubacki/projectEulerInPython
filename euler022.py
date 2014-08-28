@@ -18,7 +18,7 @@ What is the total of all the name scores in the file?
 
 import string
 
-# to use it in map()
+# will be used in map()
 # more readable than map(lambda s: s[1:-1], ...)
 def dequote(s):
     return s[1:-1]

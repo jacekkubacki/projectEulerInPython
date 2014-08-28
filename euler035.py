@@ -18,8 +18,6 @@ Then for each prime:
 - if all the rotations are in the _primes_ set then add all of them to _circularPrimes_ set
 '''
 
-# listOfPrimes() function has been written to solve Problem 7
-# now it is part of myUtils.py
 from myUtils import listOfPrimes
 
 def listOfRotations (n):

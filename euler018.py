@@ -35,7 +35,8 @@ However, Problem 67, is the same challenge with a triangle containing one-hundre
 '''
 
 '''
-Solution: we will start from the bottom.
+Solution:
+We will start from the bottom.
 Then we will compare each of the two child nodes and add the bigger number to the parent node.
 And then we will move one level up.
 The result will be in the root node.
@@ -58,7 +59,7 @@ triangle.append(list (map(int, '91 71 52 38 17 14 91 43 58 50 27 29 48'.split())
 triangle.append(list (map(int, '63 66 04 68 89 53 67 30 73 16 69 87 40 31'.split())))
 triangle.append(list (map(int, '04 62 98 27 23 09 70 98 73 93 38 53 60 04 23'.split())))
 
-for row in range(len(triangle)-1,0,-1):
+for row in range(len(triangle)-1, 0, -1):
     for column in range (0, len(triangle[row])-1):
         triangle[row-1][column] += max(triangle[row][column:column+2])
 

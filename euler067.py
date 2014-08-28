@@ -23,7 +23,8 @@ There is an efficient algorithm to solve it. ;o)
 '''
 
 '''
-Solution: we will start from the bottom.
+Solution:
+We will start from the bottom.
 Then we will compare each of the two child nodes and add the bigger number to the parent node.
 And then we will move one level up.
 The result will be in the root node.
