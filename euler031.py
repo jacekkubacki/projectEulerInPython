@@ -55,6 +55,5 @@ while len(current)>0:
     # work with _tmp_ list in the next iteration
     current = tmp      
         
-print ("Result: ", result)
+print ("Result:", result)
 
-# I can't be bothered to write a nice function
