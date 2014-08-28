@@ -48,27 +48,3 @@ while True:
         print ("Result:", triangleNumber)
         break
     naturalNumber += 1
-
-
-
-
-
-
-
-'''
-n = 2
-number = 1
-
-while True:
-    number += n
-    f = primeFactorization(number)
-    result = 1
-    for x in range (1,len(f)+1):
-        result += len(set(combinations(f,x)))
-        # print (set(combinations(f,x)))
-    #print ("==")
-    if result > 500:
-        print (number)
-        sys.exit(0)
-    n += 1
-'''           
