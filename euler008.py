@@ -25,7 +25,8 @@ The four adjacent digits in the 1000-digit number that have the greatest product
 84580156166097919133875499200524063689912560717606
 05886116467109405077541002256983155200055935729725
 71636269561882670428252483600823257530420752963450
-Find the thirteen adjacent digits in the 1000-digit number that have the greatest product. What is the value of this product?
+Find the thirteen adjacent digits in the 1000-digit number that have the greatest product.
+What is the value of this product?
 '''
 
 numbers = list(map(int, list("\
@@ -50,25 +51,24 @@ numbers = list(map(int, list("\
 05886116467109405077541002256983155200055935729725\
 71636269561882670428252483600823257530420752963450")))
 
-# start with first 13 digits
-digits = numbers[0:13]
-# calculate their product
-product = 1
-for d in digits:
-    product *= d
+from functools import reduce
+from operator  import mul
 
-for n in range (13, 1000):
-    # remove far left digit
-    del digits[0]
-    # append next digit
-    digits.append(numbers[n])
+product = 0
+howMany = 13 # how many adjacent numbers?
+
+# while loop seems to be the most readable
+n = 0
+while n <= len(numbers) - howMany:
     # caluculate product
-    p = 1
-    for d in digits: 
-        p *= d
-        
+    p = reduce (mul, numbers[n:n+howMany], 1)
     if product < p:
         product = p
 
-print ("Digits:", digits)
+    # possible optimisation: skip 'howMany' indices if numbers[n+howMany] == 0
+    # (product will be 0 because the sublists contain 0)
+
+    # next index
+    n += 1
+
 print ("Result:", product)
