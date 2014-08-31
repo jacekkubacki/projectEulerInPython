@@ -12,6 +12,7 @@ You are given that a2 = 512 and a10 = 614656.
 
 Find a30.
 '''
+
 '''
 Solution:
 The value of each element of 'powers' list will be some power of its index, except 0,1,2.
