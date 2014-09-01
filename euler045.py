@@ -28,11 +28,8 @@ If no match is found then we start over with the next H term.
 from sys import exit
 
 # Number class stores current value and index of a sequence
-# and uses _initFunction_ to find the next term
+# and uses 'initFunction' to find the next term
 class Number: 
-    index = 0
-    value = 0
-    function = 0
 
     def __init__(self, initFunction, initIndex, initValue):
         self.index = initIndex
