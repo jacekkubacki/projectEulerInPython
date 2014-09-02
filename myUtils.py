@@ -72,7 +72,6 @@ Files using this function:
 euler042.py
 '''
 alphabet = [''] + list (string.ascii_uppercase)
-
 def wordValue(s):
     """Converts each letter in a word to a number corresponding to its alphabetical position and adds these values"""
     word = list (s.upper())
@@ -81,3 +80,16 @@ def wordValue(s):
         result += alphabet.index(letter)
 
     return result
+
+'''
+sumOfDigits() function has been originally written to solve Problem 119
+
+Files using this function:
+euler016.py
+'''
+def sumOfDigits (number):
+    s = 0
+    while number > 0:
+        s += number % 10
+        number //= 10
+    return s

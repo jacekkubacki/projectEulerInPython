@@ -32,3 +32,8 @@ def test_dequote():
 def test_wordValue():
     solutions = {'euler042.py' : 'Result: 162'}
     runSolutions(solutions)
+    
+def test_sumOfDigits():
+    solutions = {'euler016.py' : 'Result: 1366'}
+    runSolutions(solutions)
+    
