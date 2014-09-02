@@ -18,8 +18,8 @@ What is the total of all the name scores in the file?
 
 import string
 
-# will be used in map()
-# more readable than map(lambda s: s[1:-1], ...)
+# dequote() will be used in map()
+# better implementation in myUtils.py
 def dequote(s):
     return s[1:-1]
     
@@ -38,7 +38,7 @@ def namescore(s):
 with open('names.txt') as f:
     data = f.read()
 
-listOfNames = list(map(dequote, list(str(data).split(','))))
+listOfNames = list(map(dequote, data.split(',')))
 listOfNames.sort()
 
 result = 0
