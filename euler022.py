@@ -22,14 +22,14 @@ import string
 # better implementation in myUtils.py
 def dequote(s):
     return s[1:-1]
-    
-def namescore(s):
-    alphabet = ['']
-    alphabet += list (string.ascii_uppercase)
-    name = list (s.upper())
 
+alphabet = ['']
+alphabet += list (string.ascii_uppercase)
+
+def wordScore(s):
+    word = list (s.upper())
     result = 0
-    for letter in name: 
+    for letter in word: 
         result += alphabet.index(letter)
 
     return result
@@ -43,6 +43,6 @@ listOfNames.sort()
 
 result = 0
 for i in range (0, len(listOfNames)):
-    result += (i + 1) * namescore(listOfNames[i])
+    result += (i + 1) * wordScore(listOfNames[i])
 
 print ("Result:", result)
