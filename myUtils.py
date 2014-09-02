@@ -1,4 +1,6 @@
 import math
+import re
+import string
 
 '''
 primeFactorization() function has been originally written to solve Problem 3
@@ -52,3 +54,30 @@ def listOfPrimes (n):
             if primes[p]: break
 
     return [i for i in range(2,n) if primes[i]]
+
+'''
+dequote() function has been originally written to solve Problem 22
+
+Files using this function:
+euler042.py
+'''
+def dequote(s):
+    """Returns the string with leading and trailing double quote character removed"""
+    return re.sub (r'^"|"$', '', s)
+
+'''
+wordScore() function has been originally written to solve Problem 22
+
+Files using this function:
+euler042.py
+'''
+alphabet = [''] + list (string.ascii_uppercase)
+
+def wordValue(s):
+    """Converts each letter in a word to a number corresponding to its alphabetical position and adds these values"""
+    word = list (s.upper())
+    result = 0
+    for letter in word: 
+        result += alphabet.index(letter)
+
+    return result
