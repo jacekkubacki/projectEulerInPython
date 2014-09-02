@@ -26,7 +26,7 @@ def dequote(s):
 alphabet = ['']
 alphabet += list (string.ascii_uppercase)
 
-def wordScore(s):
+def wordValue(s):
     word = list (s.upper())
     result = 0
     for letter in word: 
@@ -43,6 +43,6 @@ listOfNames.sort()
 
 result = 0
 for i in range (0, len(listOfNames)):
-    result += (i + 1) * wordScore(listOfNames[i])
+    result += (i + 1) * wordValue(listOfNames[i])
 
 print ("Result:", result)
