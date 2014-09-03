@@ -33,7 +33,7 @@ Then to get any factor you want you should take _up to_ a copies of p, _up to_ b
 So the number of factors for your number would be (a+1)*(b+1)*...(k+1).
 '''
 
-from myUtils import primeFactorization
+from myUtils import primeFactors
 from collections import Counter
 
 triangleNumber = 1
@@ -42,7 +42,7 @@ naturalNumber  = 2
 while True:
     triangleNumber += naturalNumber
     numberOfFactors = 1
-    for exp in Counter(primeFactorization(triangleNumber)).values():
+    for exp in Counter(primeFactors(triangleNumber)).values():
         numberOfFactors *= (exp + 1)
     if numberOfFactors > 500:
         print ("Result:", triangleNumber)
