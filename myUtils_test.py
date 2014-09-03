@@ -34,6 +34,7 @@ def test_wordValue():
     runSolutions(solutions)
     
 def test_sumOfDigits():
-    solutions = {'euler016.py' : 'Result: 1366'}
+    solutions = {'euler016.py' : 'Result: 1366',\
+                 'euler056.py' : 'Result: 972'}
     runSolutions(solutions)
     
