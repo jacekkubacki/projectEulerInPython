@@ -26,6 +26,7 @@ What is the value of the first triangle number to have over five hundred divisor
 
 '''
 Solution:
+
 The number of divisors of a given number can be easily calculated:
 http://www.manhattangmat.com/forums/is-there-a-formula-to-calculate-the-number-of-factors-t2500.html
 Suppose your number factors as a product p^a * q^b * .... *r^k.
