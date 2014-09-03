@@ -32,7 +32,7 @@ The result will be in the root node.
 
 triangle = []
 
-f = open ('triangle.txt', 'r')
+f = open ('p067_triangle.txt', 'r')
 for line in f:
     triangle.append(list (map(int, line.split())))
 f.close()
