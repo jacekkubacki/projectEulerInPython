@@ -6,25 +6,25 @@ import string
 primeFactorization() function has been originally written to solve Problem 3
 
 Files using this function:
+euler003.py
 euler005.py
 euler012.py
 '''
-def primeFactorization (n):
-    """Returns sorted list of prime factors of n"""
+
+def primeFactors (n):
+    """Returns UNSORTED list of prime factors of n"""
     # all the prime factors that are < n are also <= sqrt(n)
     limit = int (math.sqrt(n))
 
-    while limit > 0:
-        # factors found        
-        if n % limit == 0:
-            # if limit == 1 then n must be prime
-            if limit == 1:
-                return [n]
-            # try to factorize the factors found
-            else:
-                return sorted (primeFactorization(limit) + primeFactorization(n//limit))
-        limit -= 1
-
+    # let's start with 2 to break down even numbers
+    for i in range (2, limit + 1):
+        if n % i == 0:
+            # factors found, try to factorize them
+            return primeFactors(i) + primeFactors(n//i)
+    else:
+        # no factors found, must be prime  
+        return [n]
+    
 '''
 listOfPrimes() function has been originally written to solve Problem 7
 

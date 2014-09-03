@@ -13,8 +13,9 @@ def runSolutions (s):
         assert value in stdout
     
 
-def test_primeFactorization():
-    solutions = {'euler005.py' : 'Result: 232792560',\
+def test_primeFactors():
+    solutions = {'euler003.py' : 'Result: 6857',\
+                 'euler005.py' : 'Result: 232792560',\
                  'euler012.py' : 'Result: 76576500'}
     runSolutions(solutions)
 
