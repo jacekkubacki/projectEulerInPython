@@ -8,32 +8,24 @@ By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that 
 What is the 10 001st prime number?
 '''
 
-'''
-Solution:
-primeNumers is a list of prime numbers < n
-To check if n is a prime number try to divide it by the elements of the primeNumber list.
-If it is not possible then n is a prime number and add it to the list.
-'''
+def isPrime (n):
+    # This algorithm will check only numbers of the form 6k ± 1
+    # see: http://en.wikipedia.org/wiki/Primality_test#Naive_methods
+    if n <= 3:
+        return n <= 1
+    if n % 2 == 0 or n % 3 == 0:
+        return False
+    for i in range (5, int(n**0.5) + 1, 6):   
+        if n % i == 0 or n % (i + 2) == 0:
+            return False
+    return True
 
-import math
+primesFound = 2 # 2, 3
+n = 3
 
-primeNumbers = [2]
-n = 3 # start with 3 to skip all even numbers
+while primesFound < 10001:
+    n += 2
+    if isPrime(n):
+        primesFound += 1
 
-# a better algorithm for finding prime numbers can be found in myUtils.py
-while len(primeNumbers) < 10001:
-    isPrime = True
-    for p in primeNumbers[1:]: # ignore 2 as we are checking only odd numbers
-        # we only want to check the primes <= sqrt(n)
-        # see: http://en.wikipedia.org/wiki/Prime_number#Trial_division
-        if p <= math.sqrt(n):
-            if n % p == 0:
-                isPrime = False
-                break
-        else:
-            break
-    if isPrime:
-        primeNumbers.append(n)
-    n += 2 # to skip even numbers
-
-print ("Result:", primeNumbers[-1])
+print ("Result:", n)
