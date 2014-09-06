@@ -89,6 +89,7 @@ sumOfDigits() function has been originally written to solve Problem 119
 Files using this function:
 euler016.py
 euler056.py
+euler119.py
 '''
 def sumOfDigits (number):
     s = 0
