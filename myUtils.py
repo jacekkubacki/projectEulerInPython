@@ -28,7 +28,7 @@ def primeFactors (n):
 '''
 listOfPrimes() function has been originally written to solve Problem 7
 
-Files using this function:
+Files using listOfPrimes function:
 euler010.py
 euler035.py
 euler049.py
@@ -59,6 +59,7 @@ def listOfPrimes (n):
 dequote() function has been originally written to solve Problem 22
 
 Files using this function:
+euler022.py
 euler042.py
 '''
 def dequote(s):
@@ -69,6 +70,7 @@ def dequote(s):
 wordScore() function has been originally written to solve Problem 22
 
 Files using this function:
+euler022.py
 euler042.py
 '''
 alphabet = [''] + list (string.ascii_uppercase)

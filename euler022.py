@@ -17,23 +17,7 @@ What is the total of all the name scores in the file?
 '''
 
 import string
-
-# dequote() will be used in map()
-
-# better implementation in myUtils.py
-def dequote(s):
-    return s[1:-1]
-
-alphabet = ['']
-alphabet += list (string.ascii_uppercase)
-
-def wordValue(s):
-    word = list (s.upper())
-    result = 0
-    for letter in word: 
-        result += alphabet.index(letter)
-
-    return result
+from myUtils import dequote, wordValue
 
 # with statement with file object: opens file in 'r' mode, closes file on exit
 with open('p022_names.txt') as f:

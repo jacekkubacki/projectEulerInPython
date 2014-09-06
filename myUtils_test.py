@@ -27,11 +27,13 @@ def test_listOfPrimes():
     runSolutions(solutions)
     
 def test_dequote():
-    solutions = {'euler042.py' : 'Result: 162'}
+    solutions = {'euler022.py' : 'Result: 871198282',\
+                 'euler042.py' : 'Result: 162'}
     runSolutions(solutions)
 
 def test_wordValue():
-    solutions = {'euler042.py' : 'Result: 162'}
+    solutions = {'euler022.py' : 'Result: 871198282',\
+                 'euler042.py' : 'Result: 162'}
     runSolutions(solutions)
     
 def test_sumOfDigits():
