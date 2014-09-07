@@ -3,7 +3,7 @@ import re
 import string
 
 '''
-primeFactorization() function has been originally written to solve Problem 3
+primeFactors() function has been originally written to solve Problem 3
 
 Files using this function:
 euler003.py
@@ -97,3 +97,22 @@ def sumOfDigits (number):
         s += number % 10
         number //= 10
     return s
+
+'''
+isPrime() has been written to solve Problem 7
+
+Files using this function:
+euler007.py
+euler041.py
+'''
+def isPrime (number):
+    # This algorithm checks if the given number can be divided by integers of the form 6k +/- 1
+    # see: http://en.wikipedia.org/wiki/Primality_test#Naive_methods
+    if number <= 3:
+        return number <= 1
+    if number % 2 == 0 or number % 3 == 0:
+        return False
+    for i in range (5, int(number ** 0.5) + 1, 6):
+        if number % i == 0 or number % (i + 2) == 0:
+            return False
+    return True

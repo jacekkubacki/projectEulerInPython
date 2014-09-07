@@ -8,24 +8,14 @@ By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that 
 What is the 10 001st prime number?
 '''
 
-def isPrime (n):
-    # This algorithm will check only numbers of the form 6k ± 1
-    # see: http://en.wikipedia.org/wiki/Primality_test#Naive_methods
-    if n <= 3:
-        return n <= 1
-    if n % 2 == 0 or n % 3 == 0:
-        return False
-    for i in range (5, int(n**0.5) + 1, 6):   
-        if n % i == 0 or n % (i + 2) == 0:
-            return False
-    return True
+from myUtils import isPrime
 
 primesFound = 2 # 2, 3
-n = 3
+currentNumber = 3
 
 while primesFound < 10001:
-    n += 2
-    if isPrime(n):
+    currentNumber += 2
+    if isPrime(currentNumber):
         primesFound += 1
 
-print ("Result:", n)
+print ("Result:", currentNumber)

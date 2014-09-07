@@ -41,4 +41,8 @@ def test_sumOfDigits():
                  'euler056.py' : 'Result: 972',\
                  'euler119.py' : 'Result: 248155780267521'}
     runSolutions(solutions)
-    
+
+def test_isPrime():
+    solutions = {'euler007.py' : 'Result: 104743',\
+                 'euler041.py' : 'Result: 7652413'}
+    runSolutions(solutions)
