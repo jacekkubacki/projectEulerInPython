@@ -30,7 +30,9 @@ Solution:
 The number of divisors of a given number can be easily calculated:
 http://www.manhattangmat.com/forums/is-there-a-formula-to-calculate-the-number-of-factors-t2500.html
 Suppose your number factors as a product p^a * q^b * .... *r^k.
-Then to get any factor you want you should take _up to_ a copies of p, _up to_ b copies of q, etc. and multiply them all together. The number of ways you can choose _up to_ a copies of p is (a+1) since you could choose 0 copies, 1 copy, 2 copies, ..., a copies. Likewise there are (b+1) ways to choose how many q's to include, etc. 
+Then to get any factor you want you should take up to a copies of p, up to b copies of q, etc. and multiply them all together.
+The number of ways you can choose up to a copies of p is (a+1) since you could choose 0 copies, 1 copy, 2 copies, ..., a copies.
+Likewise there are (b+1) ways to choose how many q's to include, etc.
 So the number of factors for your number would be (a+1)*(b+1)*...(k+1).
 '''
 
@@ -42,10 +44,13 @@ naturalNumber  = 2
 
 while True:
     triangleNumber += naturalNumber
+
     numberOfFactors = 1
     for exp in Counter(primeFactors(triangleNumber)).values():
         numberOfFactors *= (exp + 1)
+
     if numberOfFactors > 500:
         print ("Result:", triangleNumber)
         break
+
     naturalNumber += 1
