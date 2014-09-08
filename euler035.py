@@ -14,15 +14,15 @@ How many circular primes are there below one million?
 Solution:
 Find all the prime numbers < 1000000 first.
 Then for each prime:
-- ignore it if it is already in the _circularPrimes_ set
-- if all the rotations are in the _primes_ set then add all of them to _circularPrimes_ set
+- ignore it if it is already in the 'circularPrimes' set
+- if all the rotations are in the 'primes' set then add all of them to 'circularPrimes' set
 '''
 
 from myUtils import listOfPrimes
 
 def listOfRotations (n):
     if 0 in set(list(str(n))):
-        return [] # cannot rotate numbers containig '0'
+        return [] # cannot rotate numbers containing '0'
     result = []
     s = str(n)
     for i in range (0, len(s)):
