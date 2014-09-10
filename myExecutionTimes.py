@@ -7,13 +7,14 @@ ToDo:
 '''
 
 import glob
+import sys
 import subprocess
 import re
 
 results = []
 
 for file in glob.iglob('euler*.py'):
-    print(".", end="", flush=True) # progress indicator
+    print(".", end="", flush=True, file=sys.stderr) # progress indicator
     
     executeString = 'time ' + 'python3 ' + file
     cmd = subprocess.Popen(executeString, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
@@ -40,6 +41,7 @@ for file in glob.iglob('euler*.py'):
             # no need to parse other lines
             break
 
-print("") # new line            
+print(".", end="\n", flush=True, file=sys.stderr) # new line
+
 for r in sorted(results, key=lambda k: k['realTime'], reverse=True):
     print (r['fileAndTime'])
