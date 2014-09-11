@@ -13,7 +13,10 @@ import re
 
 results = []
 
-for file in glob.iglob('euler*.py'):
+listOfFiles = glob.glob('euler*.py')
+print("%d file%s found." % (len(listOfFiles), "s"[len(listOfFiles)==1:]), file=sys.stderr)
+
+for file in listOfFiles:
     print(".", end="", flush=True, file=sys.stderr) # progress indicator
     
     executeString = 'time ' + 'python3 ' + file
@@ -41,7 +44,7 @@ for file in glob.iglob('euler*.py'):
             # no need to parse other lines
             break
 
-print(".", end="\n", flush=True, file=sys.stderr) # new line
+print("", end="\n", flush=True, file=sys.stderr) # new line
 
 for r in sorted(results, key=lambda k: k['realTime'], reverse=True):
     print (r['fileAndTime'])
