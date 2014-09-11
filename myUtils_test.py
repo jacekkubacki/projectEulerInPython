@@ -21,6 +21,7 @@ def test_primeFactors():
 
 def test_listOfPrimes():
     solutions = {'euler010.py' : 'Result: 142913828922',\
+                 'euler027.py' : 'Result: -59231',\
                  'euler035.py' : 'Result: 55',\
                  'euler049.py' : 'Result: 296962999629',\
                  'euler050.py' : 'Result: 997651'}
@@ -44,5 +45,6 @@ def test_sumOfDigits():
 
 def test_isPrime():
     solutions = {'euler007.py' : 'Result: 104743',\
+                 'euler027.py' : 'Result: -59231',\
                  'euler041.py' : 'Result: 7652413'}
     runSolutions(solutions)
