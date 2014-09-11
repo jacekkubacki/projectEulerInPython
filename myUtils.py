@@ -2,29 +2,52 @@ import math
 import re
 import string
 
+
 '''
-primeFactors() function has been originally written to solve Problem 3
+arithmeticSum() function has been originally written to solve Problem 1
 
 Files using this function:
-euler003.py
-euler005.py
-euler012.py
+euler001.py
 '''
+def arithmeticSum(a1, diff, n):
+    """Returns sum of arithmetic progression"""
+    return (2 * a1 + (n - 1) * diff) * (n / 2.0)
 
-def primeFactors (n):
-    """Returns UNSORTED list of prime factors of n"""
-    # all the prime factors that are < n are also <= sqrt(n)
-    limit = int (math.sqrt(n))
 
-    # let's start with 2 to break down even numbers
-    for i in range (2, limit + 1):
-        if n % i == 0:
-            # factors found, try to factorize them
-            return primeFactors(i) + primeFactors(n//i)
-    else:
-        # no factors found, must be prime  
-        return [n]
-    
+'''
+dequote() function has been originally written to solve Problem 22
+
+Files using this function:
+euler022.py
+euler042.py
+'''
+def dequote(s):
+    """Returns the string with leading and trailing double quote character removed"""
+    return re.sub(r'^"|"$', '', s)
+
+
+'''
+isPrime() has been written to solve Problem 7
+
+Files using this function:
+euler007.py
+euler027.py
+euler041.py
+'''
+def isPrime (number):
+    """Returns True is number is prime, False otherwise"""
+    # This algorithm checks if the given number can be divided by integers of the form 6k +/- 1
+    # see: http://en.wikipedia.org/wiki/Primality_test#Naive_methods
+    if number <= 3:
+        return number > 1
+    if number % 2 == 0 or number % 3 == 0:
+        return False
+    for i in range(5, int(number ** 0.5) + 1, 6):
+        if number % i == 0 or number % (i + 2) == 0:
+            return False
+    return True
+
+
 '''
 listOfPrimes() function has been originally written to solve Problem 7
 
@@ -38,7 +61,7 @@ euler050.py
 def listOfPrimes (n):
     """Returns ordered list of primes in range(2,n)"""
     """using linear sieve algorithm: http://edu.i-lo.tarnow.pl/inf/alg/001_search/0012.php"""
-    primes = [True for i in range (0,n)]
+    primes = [True for i in range(0, n)]
     p = 2
     while p * p < n:
         q = p
@@ -54,35 +77,31 @@ def listOfPrimes (n):
             p += 1
             if primes[p]: break
 
-    return [i for i in range(2,n) if primes[i]]
+    return [i for i in range(2, n) if primes[i]]
+
 
 '''
-dequote() function has been originally written to solve Problem 22
+primeFactors() function has been originally written to solve Problem 3
 
 Files using this function:
-euler022.py
-euler042.py
+euler003.py
+euler005.py
+euler012.py
 '''
-def dequote(s):
-    """Returns the string with leading and trailing double quote character removed"""
-    return re.sub (r'^"|"$', '', s)
+def primeFactors(n):
+    """Returns UNSORTED list of prime factors of n"""
+    # all the prime factors that are < n are also <= sqrt(n)
+    limit = int (math.sqrt(n))
 
-'''
-wordValue() function has been originally written to solve Problem 22
-
-Files using this function:
-euler022.py
-euler042.py
-'''
-alphabet = [''] + list (string.ascii_uppercase)
-def wordValue(s):
-    """Converts each letter in a word to a number corresponding to its alphabetical position and adds these values"""
-    word = list (s.upper())
-    result = 0
-    for letter in word: 
-        result += alphabet.index(letter)
-
-    return result
+    # let's start with 2 to break down even numbers
+    for i in range (2, limit + 1):
+        if n % i == 0:
+            # factors found, try to factorize them
+            return primeFactors(i) + primeFactors(n//i)
+    else:
+        # no factors found, must be prime  
+        return [n]
+    
 
 '''
 sumOfDigits() function has been originally written to solve Problem 119
@@ -92,29 +111,27 @@ euler016.py
 euler056.py
 euler119.py
 '''
-def sumOfDigits (number):
+def sumOfDigits(number):
     s = 0
     while number > 0:
         s += number % 10
         number //= 10
     return s
 
+
 '''
-isPrime() has been written to solve Problem 7
+wordValue() function has been originally written to solve Problem 22
 
 Files using this function:
-euler007.py
-euler027.py
-euler041.py
+euler022.py
+euler042.py
 '''
-def isPrime (number):
-    # This algorithm checks if the given number can be divided by integers of the form 6k +/- 1
-    # see: http://en.wikipedia.org/wiki/Primality_test#Naive_methods
-    if number <= 3:
-        return number > 1
-    if number % 2 == 0 or number % 3 == 0:
-        return False
-    for i in range (5, int(number ** 0.5) + 1, 6):
-        if number % i == 0 or number % (i + 2) == 0:
-            return False
-    return True
+alphabet = [''] + list(string.ascii_uppercase)
+def wordValue(s):
+    """Converts each letter in a word to a number corresponding to its alphabetical position and adds these values"""
+    word = list (s.upper())
+    result = 0
+    for letter in word:
+        result += alphabet.index(letter)
+
+    return result
