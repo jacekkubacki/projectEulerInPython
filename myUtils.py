@@ -30,6 +30,7 @@ listOfPrimes() function has been originally written to solve Problem 7
 
 Files using listOfPrimes function:
 euler010.py
+euler027.py
 euler035.py
 euler049.py
 euler050.py
@@ -67,7 +68,7 @@ def dequote(s):
     return re.sub (r'^"|"$', '', s)
 
 '''
-wordScore() function has been originally written to solve Problem 22
+wordValue() function has been originally written to solve Problem 22
 
 Files using this function:
 euler022.py
@@ -103,13 +104,14 @@ isPrime() has been written to solve Problem 7
 
 Files using this function:
 euler007.py
+euler027.py
 euler041.py
 '''
 def isPrime (number):
     # This algorithm checks if the given number can be divided by integers of the form 6k +/- 1
     # see: http://en.wikipedia.org/wiki/Primality_test#Naive_methods
     if number <= 3:
-        return number <= 1
+        return number > 1
     if number % 2 == 0 or number % 3 == 0:
         return False
     for i in range (5, int(number ** 0.5) + 1, 6):
