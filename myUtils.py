@@ -8,6 +8,7 @@ arithmeticSum() function has been originally written to solve Problem 1
 
 Files using this function:
 euler001.py
+euler023.py
 '''
 def arithmeticSum(a1, diff, n):
     """Returns sum of arithmetic progression"""
@@ -87,6 +88,7 @@ Files using this function:
 euler003.py
 euler005.py
 euler012.py
+euler023.py
 '''
 def primeFactors(n):
     """Returns UNSORTED list of prime factors of n"""

@@ -15,7 +15,8 @@ def runSolutions(s):
 
 
 def test_arithmeticSum():
-    solutions = {'euler001.py': 'Result: 233168'}
+    solutions = {'euler001.py': 'Result: 233168',
+                 'euler023.py': 'Result: 4179871'}
     runSolutions(solutions)
 
 
@@ -44,7 +45,8 @@ def test_listOfPrimes():
 def test_primeFactors():
     solutions = {'euler003.py': 'Result: 6857',
                  'euler005.py': 'Result: 232792560',
-                 'euler012.py': 'Result: 76576500'}
+                 'euler012.py': 'Result: 76576500',
+                 'euler023.py': 'Result: 4179871'}
     runSolutions(solutions)
 
 
