@@ -29,7 +29,8 @@ def test_dequote():
 def test_isPrime():
     solutions = {'euler007.py': 'Result: 104743',
                  'euler027.py': 'Result: -59231',
-                 'euler041.py': 'Result: 7652413'}
+                 'euler041.py': 'Result: 7652413',
+                 'euler058.py': 'Result: 26241'}
     runSolutions(solutions)
 
 

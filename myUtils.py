@@ -35,6 +35,7 @@ Files using this function:
 euler007.py
 euler027.py
 euler041.py
+euler058.py
 '''
 def isPrime (number):
     """Returns True is number is prime, False otherwise"""
