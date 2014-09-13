@@ -33,6 +33,12 @@ def test_isPrime():
     runSolutions(solutions)
 
 
+def test_listOfDivisors():
+    solutions = {'euler021.py': 'Result: 31626',
+                 'euler023.py': 'Result: 4179871'}
+    runSolutions(solutions)
+
+
 def test_listOfPrimes():
     solutions = {'euler010.py': 'Result: 142913828922',
                  'euler027.py': 'Result: -59231',

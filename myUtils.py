@@ -1,3 +1,4 @@
+import itertools
 import math
 import re
 import string
@@ -47,6 +48,31 @@ def isPrime (number):
         if number % i == 0 or number % (i + 2) == 0:
             return False
     return True
+
+
+'''
+listOfDivisors() has been written to solve Problem 23
+
+Files using this function:
+euler021.py
+euler023.py
+'''
+def listOfDivisors(number):
+    """Returns list of numbers less than n which divide evenly into n"""
+    if number <= 1:
+        return []
+
+    divisors = set([1])
+    factors = primeFactors(number)
+
+    for r in range(1, len(factors)):
+        for c in itertools.combinations(factors, r):
+            n = 1
+            for d in c:
+                n *= d
+            divisors.add(n)
+
+    return list(divisors)
 
 
 '''

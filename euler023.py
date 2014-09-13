@@ -15,22 +15,8 @@ However, this upper limit cannot be reduced any further by analysis even though 
 Find the sum of all the positive integers which cannot be written as the sum of two abundant numbers.
 '''
 
-from myUtils import primeFactors, arithmeticSum
-from itertools import combinations
+from myUtils import arithmeticSum, listOfDivisors
 from bisect import bisect
-
-def listOfDivisors(number):
-    # works for positive ints only
-    factors = primeFactors(number)
-    divisors = set([1])
-
-    for r in range(1, len(factors)):
-        for c in combinations(factors, r):
-            n = 1
-            for d in c:
-                n *= d
-            divisors.add(n)
-    return list(divisors)
 
 # no need to check numbers >= 28123
 limit = 28123
