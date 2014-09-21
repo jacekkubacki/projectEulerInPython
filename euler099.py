@@ -35,4 +35,5 @@ for line in f:
 
     lineNumber += 1
 
+f.close()
 print ("Result:", result)
