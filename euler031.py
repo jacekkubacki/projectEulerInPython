@@ -12,48 +12,31 @@ It is possible to make £2 in the following way:
 How many different ways can £2 be made using any number of coins?
 '''
 
-'''
-Solution:
-The idea is to build all the possible lists of coins in a descending value order.
-We start with list containig the sublists with one coin of each type.
-Then we parse through the list and:
-- remove the sublist if it ends with 1 - it means that the sublist would end with one or more 1p coins
-- remove the sublist if the sum of the coins equals 200
-- replace current sublist with new sublists created by adding a coin (same or smaller value) to the current sublist
-Repeat the process until the list is empty.
-'''
+COINS = [200, 100, 50, 20, 10, 5, 2, 1]
+TOTAL = 200
 
-result = 0
-total = 200
-coins = [200,100,50,20,10,5,2,1]
-current = [[c] for c in coins]
+# This recursive function will add coins in a descending value order
+def addCoins(currentSum, lastCoin):
+    result = 0
 
-while len(current)>0:
-    tmp = [] # to build _current_ list for the next iteration
+    # too much, not a valid combination
+    if currentSum > TOTAL:
+        return 0
 
-    for c in current:
+    # valid combination found
+    if currentSum == TOTAL:
+        return 1
 
-        # solution found: coins sum up to 200
-        if sum(c) == total:
-            result += 1
-            continue
+    # if the last digit is 1, then all remaining coins are 1p
+    if lastCoin == 1:
+        return 1
 
-        # solution found: only 1p coin(s) left
-        if c[-1] == 1:
-            result += 1
-            continue
+    # add a new coin if the value is smaller or equal to the last one
+    for c in COINS:
+        if c <= lastCoin:
+            result += addCoins(currentSum + c, c)
 
-        # find the position of the last coin in _coins_
-        # to add only the coins of same or smaller value
-        i = coins.index(c[-1])
-        for coin in coins[i:]:
-            if coin + sum(c) <= total:
-                # create and add new sublists to _tmp_
-                t = list(c)
-                t.append(coin)
-                tmp.append(t)
-    # work with _tmp_ list in the next iteration
-    current = tmp      
-        
-print ("Result:", result)
+    return result
 
+# lastCoin in addCoins is 200, so all COINS can be used in the first step
+print ("Result:", addCoins(0, 200))
