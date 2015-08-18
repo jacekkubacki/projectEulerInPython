@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/usr/bin/env python3
 '''
 Multiples of 3 and 5
 Problem 1
