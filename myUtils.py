@@ -88,7 +88,7 @@ euler050.py
 '''
 def listOfPrimes (n):
     """Returns ordered list of primes in range(2,n)"""
-    """using linear sieve algorithm: http://edu.i-lo.tarnow.pl/inf/alg/001_search/0012.php"""
+    # linear sieve algorithm: http://edu.i-lo.tarnow.pl/inf/alg/001_search/0012.php
     primes = [True for i in range(0, n)]
     p = 2
     while p * p < n:
