@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/usr/bin/env python3
 '''
 Integer right triangles
 Problem 39
@@ -7,7 +7,7 @@ If p is the perimeter of a right angle triangle with integral length sides, {a,b
 
 {20,48,52}, {24,45,51}, {30,40,50}
 
-For which value of p ≤ 1000, is the number of solutions maximised?
+For which value of p <= 1000, is the number of solutions maximised?
 '''
 
 '''

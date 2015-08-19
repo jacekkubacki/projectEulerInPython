@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/usr/bin/env python3
 '''
 Simple tests to make sure that myUtils.py changes don't cause any problems.
 To run the tests:

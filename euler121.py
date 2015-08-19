@@ -1,4 +1,6 @@
-#!/usr/local/bin/python3
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# the above line allows '£' to be in the source code without PyCharm complaining about it
 '''
 Disc game prize fund
 Problem 121
@@ -24,7 +26,7 @@ eX <= p1*(x1-1) + p2*x2
 
 where
 p1 : probability of winning, p1>0
-x1 : prize, we substract £1 as the player must pay to win the prize
+x1 : prize, we subtract £1 as the player must pay to win the prize
 p2 : probability of losing, p2>0
 x2 : -1, player pays £1 to play
 
