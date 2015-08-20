@@ -1,16 +1,15 @@
 #!/usr/bin/env python3
-'''
-Prime permutations
-Problem 49
 
-The arithmetic sequence, 1487, 4817, 8147, in which each of the terms increases by 3330, is unusual in two ways:
-(i) each of the three terms are prime, and,
-(ii) each of the 4-digit numbers are permutations of one another.
-
-There are no arithmetic sequences made up of three 1-, 2-, or 3-digit primes, exhibiting this property, but there is one other 4-digit increasing sequence.
-
-What 12-digit number do you form by concatenating the three terms in this sequence?
-'''
+# Prime permutations
+# Problem 49
+#
+# The arithmetic sequence, 1487, 4817, 8147, in which each of the terms increases by 3330, is unusual in two ways:
+# (i) each of the three terms are prime, and,
+# (ii) each of the 4-digit numbers are permutations of one another.
+#
+# There are no arithmetic sequences made up of three 1-, 2-, or 3-digit primes, exhibiting this property, but there is one other 4-digit increasing sequence.
+#
+# What 12-digit number do you form by concatenating the three terms in this sequence?
 
 from myUtils import listOfPrimes
 
@@ -22,7 +21,7 @@ from itertools import permutations
 
 from sys import exit
 
-primes = set (listOfPrimes (10000))
+primes = set (listOfPrimes(10000))
 
 for p in primes:
     if p < 1000:
@@ -49,7 +48,7 @@ for p in primes:
     for i in range (0, limit-2):
         for j in range (i+1, limit-1):
             for k in range (j+1, limit):
-                if perm[i]+perm[k] == 2*perm[j]: # a[n] + a[n+2] = 2 * a[n+1] in arithmetic sequence
+                if perm[i]+perm[k] == 2*perm[j]:  # a[n] + a[n+2] = 2 * a[n+1] in arithmetic sequence
                     if perm[i] == 1487:
                         continue # ignore existing solution; optimal solution would break out of this nested loop 
                     else: # new solution found

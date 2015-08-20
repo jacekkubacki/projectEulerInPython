@@ -1,10 +1,9 @@
 #!/usr/local/bin/python3
-'''
-Run 'time' utility and sort the results to find canditates for optimisation.
+"""Run 'time' utility and sort the results to find canditates for optimisation."""
 
-ToDo:
-- nice pattern matching when parsing stderr
-'''
+# ToDo:
+# - nice pattern matching when parsing stderr
+
 
 import glob
 import sys
@@ -14,10 +13,10 @@ import re
 results = []
 
 listOfFiles = glob.glob('euler*.py')
-print("%d file%s found." % (len(listOfFiles), "s"[len(listOfFiles)==1:]), file=sys.stderr)
+print ("%d file%s found." % (len(listOfFiles), "s"[len(listOfFiles)==1:]), file=sys.stderr)
 
 for file in listOfFiles:
-    print(".", end="", flush=True, file=sys.stderr) # progress indicator
+    print (".", end="", flush=True, file=sys.stderr)  # progress indicator
     
     executeString = 'time ' + 'python3 ' + file
     cmd = subprocess.Popen(executeString, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
@@ -44,7 +43,7 @@ for file in listOfFiles:
             # no need to parse other lines
             break
 
-print("", end="\n", flush=True, file=sys.stderr) # new line
+print ("", end="\n", flush=True, file=sys.stderr)  # new line
 
 for r in sorted(results, key=lambda k: k['realTime'], reverse=True):
     print (r['fileAndTime'])

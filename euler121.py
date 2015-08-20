@@ -1,54 +1,51 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # the above line allows '£' to be in the source code without PyCharm complaining about it
-'''
-Disc game prize fund
-Problem 121
 
-A bag contains one red disc and one blue disc.
-In a game of chance a player takes a disc at random and its colour is noted.
-After each turn the disc is returned to the bag, an extra red disc is added, and another disc is taken at random.
+# Disc game prize fund
+# Problem 121
+#
+# A bag contains one red disc and one blue disc.
+# In a game of chance a player takes a disc at random and its colour is noted.
+# After each turn the disc is returned to the bag, an extra red disc is added, and another disc is taken at random.
+#
+# The player pays £1 to play and wins if they have taken more blue discs than red discs at the end of the game.
+# If the game is played for four turns, the probability of a player winning is exactly 11/120, and so the maximum prize fund the banker should allocate for winning in this game would be £10 before they would expect to incur a loss.
+# Note that any payout will be a whole number of pounds and also includes the original £1 paid to play the game, so in the example given the player actually wins £9.
+#
+# Find the maximum prize fund that should be allocated to a single game in which fifteen turns are played.
 
-The player pays £1 to play and wins if they have taken more blue discs than red discs at the end of the game.
-If the game is played for four turns, the probability of a player winning is exactly 11/120, and so the maximum prize fund the banker should allocate for winning in this game would be £10 before they would expect to incur a loss.
-Note that any payout will be a whole number of pounds and also includes the original £1 paid to play the game, so in the example given the player actually wins £9.
-
-Find the maximum prize fund that should be allocated to a single game in which fifteen turns are played.
-'''
-
-'''
-Solution:
-
-For the game to be fair the expected value must be 0.
-We are looking for a game with expected value <= 0.
-
-eX <= p1*(x1-1) + p2*x2
-
-where
-p1 : probability of winning, p1>0
-x1 : prize, we subtract £1 as the player must pay to win the prize
-p2 : probability of losing, p2>0
-x2 : -1, player pays £1 to play
-
-0 <= p1*(x1-1) - p2
-x1 <= p2/p1 + 1
-
-The answer would be the integer part of x1, as int(x1) <= x1 for x1>=0.
-
-Because
-p1 = casesFavorable / allCases
-and
-p2 = 1 - p1 = 1 - casesFavorable / allCases = (allCases - casesFavorable) / allCases
-
-then
-x1 <= p2/p1 + 1 = (allCases - casesFavorable) / allCases  + 1
-
-It the first round we have 2 disk to choose from, in the second there are 3 disks and so on.
-In the Nth round there are N+1 disks to choose from.
-That gives us allCases = 2 * 3 * ... * N * (N+1) = (N+1)!
-
-casesFavorable will be found by brute force, see below.
-'''
+# Solution:
+#
+# For the game to be fair the expected value must be 0.
+# We are looking for a game with expected value <= 0.
+#
+# eX <= p1*(x1-1) + p2*x2
+#
+# where
+# p1 : probability of winning, p1>0
+# x1 : prize, we subtract £1 as the player must pay to win the prize
+# p2 : probability of losing, p2>0
+# x2 : -1, player pays £1 to play
+#
+# 0 <= p1*(x1-1) - p2
+# x1 <= p2/p1 + 1
+#
+# The answer would be the integer part of x1, as int(x1) <= x1 for x1>=0.
+#
+# Because
+# p1 = casesFavorable / allCases
+# and
+# p2 = 1 - p1 = 1 - casesFavorable / allCases = (allCases - casesFavorable) / allCases
+#
+# then
+# x1 <= p2/p1 + 1 = (allCases - casesFavorable) / allCases  + 1
+#
+# It the first round we have 2 disk to choose from, in the second there are 3 disks and so on.
+# In the Nth round there are N+1 disks to choose from.
+# That gives us allCases = 2 * 3 * ... * N * (N+1) = (N+1)!
+#
+# casesFavorable will be found by brute force, see below.
 
 from math import factorial
 

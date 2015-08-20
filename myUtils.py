@@ -4,39 +4,16 @@ import re
 import string
 
 
-'''
-arithmeticSum() function has been originally written to solve Problem 1
-
-Files using this function:
-euler001.py
-euler023.py
-'''
 def arithmeticSum(a1, diff, n):
     """Returns sum of arithmetic progression"""
     return (2 * a1 + (n - 1) * diff) * (n / 2.0)
 
 
-'''
-dequote() function has been originally written to solve Problem 22
-
-Files using this function:
-euler022.py
-euler042.py
-'''
 def dequote(s):
     """Returns the string with leading and trailing double quote character removed"""
     return re.sub(r'^"|"$', '', s)
 
 
-'''
-isPrime() has been written to solve Problem 7
-
-Files using this function:
-euler007.py
-euler027.py
-euler041.py
-euler058.py
-'''
 def isPrime (number):
     """Returns True is number is prime, False otherwise"""
     # This algorithm checks if the given number can be divided by integers of the form 6k +/- 1
@@ -51,13 +28,6 @@ def isPrime (number):
     return True
 
 
-'''
-listOfDivisors() has been written to solve Problem 23
-
-Files using this function:
-euler021.py
-euler023.py
-'''
 def listOfDivisors(number):
     """Returns list of numbers less than n which divide evenly into n"""
     if number <= 1:
@@ -76,16 +46,6 @@ def listOfDivisors(number):
     return list(divisors)
 
 
-'''
-listOfPrimes() function has been originally written to solve Problem 7
-
-Files using listOfPrimes function:
-euler010.py
-euler027.py
-euler035.py
-euler049.py
-euler050.py
-'''
 def listOfPrimes (n):
     """Returns ordered list of primes in range(2,n)"""
     # linear sieve algorithm: http://edu.i-lo.tarnow.pl/inf/alg/001_search/0012.php
@@ -108,15 +68,6 @@ def listOfPrimes (n):
     return [i for i in range(2, n) if primes[i]]
 
 
-'''
-primeFactors() function has been originally written to solve Problem 3
-
-Files using this function:
-euler003.py
-euler005.py
-euler012.py
-euler023.py
-'''
 def primeFactors(n):
     """Returns UNSORTED list of prime factors of n"""
     # all the prime factors that are < n are also <= sqrt(n)
@@ -132,14 +83,6 @@ def primeFactors(n):
         return [n]
     
 
-'''
-sumOfDigits() function has been originally written to solve Problem 119
-
-Files using this function:
-euler016.py
-euler056.py
-euler119.py
-'''
 def sumOfDigits(number):
     s = 0
     while number > 0:
@@ -148,13 +91,6 @@ def sumOfDigits(number):
     return s
 
 
-'''
-wordValue() function has been originally written to solve Problem 22
-
-Files using this function:
-euler022.py
-euler042.py
-'''
 alphabet = [''] + list(string.ascii_uppercase)
 def wordValue(s):
     """Converts each letter in a word to a number corresponding to its alphabetical position and adds these values"""

@@ -1,24 +1,20 @@
 #!/usr/bin/env python3
-'''
-Pandigital products
-Problem 32
 
-We shall say that an n-digit number is pandigital if it makes use of all the digits 1 to n exactly once; for example, the 5-digit number, 15234, is 1 through 5 pandigital.
+# Pandigital products
+# Problem 32
+#
+# We shall say that an n-digit number is pandigital if it makes use of all the digits 1 to n exactly once; for example, the 5-digit number, 15234, is 1 through 5 pandigital.
+#
+# The product 7254 is unusual, as the identity, 39 x 186 = 7254, containing multiplicand, multiplier, and product is 1 through 9 pandigital.
+#
+# Find the sum of all products whose multiplicand/multiplier/product identity can be written as a 1 through 9 pandigital.
+#
+# HINT: Some products can be obtained in more than one way so be sure to only include it once in your sum.
 
-The product 7254 is unusual, as the identity, 39 x 186 = 7254, containing multiplicand, multiplier, and product is 1 through 9 pandigital.
-
-Find the sum of all products whose multiplicand/multiplier/product identity can be written as a 1 through 9 pandigital.
-
-HINT: Some products can be obtained in more than one way so be sure to only include it once in your sum.
-'''
-
-'''
-Solution:
-
-The identity contains 9 digits only when multiplicand is 1- or 2-digits number, assuming that multiplicand < multiplier.
-When multiplicand is a 1-digit number then multiplier must be a 4-digits number,
-When multiplicand is a 2-digit number then multiplier must be a 3 digits number.
-'''
+# Solution:
+# The identity contains 9 digits only when multiplicand is 1- or 2-digits number, assuming that multiplicand < multiplier.
+# When multiplicand is a 1-digit number then multiplier must be a 4-digits number,
+# When multiplicand is a 2-digit number then multiplier must be a 3 digits number.
 
 from itertools import permutations
 
@@ -48,4 +44,3 @@ for multiplicand in [m for m in range(2,100) if m % 10 and m % 11]:
                 results.append(product)
 
 print ("Result:", sum(results))
-    
