@@ -2,7 +2,7 @@ Solving algorithmic problems to learn Python.
 See: http://projecteuler.net/problems
 
 My goal is to learn Python, so I will focus more on Python concepts and code readability than on implementing the most optimal algorithms.
-If I can get the result within 10 seconds I will consider the algorithm as ‘good enough’.
+If on my laptop I can get the result within 10 seconds I will consider the solution as ‘good enough’, otherwise I will try to find more optimal way of solving the problem.
 
 I'm using Python 3.x to be up to date with the new aspects of the language.
 
