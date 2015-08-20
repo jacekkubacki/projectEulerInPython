@@ -1,5 +1,5 @@
 #!/usr/local/bin/python3
-"""Run 'time' utility and sort the results to find canditates for optimisation."""
+"""Run 'time' utility and sort the results to find candidates for optimization."""
 
 # ToDo:
 # - nice pattern matching when parsing stderr
