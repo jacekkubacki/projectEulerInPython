@@ -1,8 +1,7 @@
-
-.idea/.name
+*.pyc
 
 *.xml
 
-.idea/projectEulerInPython.iml
+.idea/*
 
-*.pyc
+
