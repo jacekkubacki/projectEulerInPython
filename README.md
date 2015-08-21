@@ -17,4 +17,7 @@ I commit the code using different methods: command-line git, git integration in 
 Tests for _myUtils.py_ were initially written using pytest, currently I'm using unittest.
 It has been suggested to me that it would be nice to use http://travis-ci.org/, so here it is.
 
-[![Build Status](https://travis-ci.org/jacekkubacki/projectEulerInPython.svg?branch=master)](https://travis-ci.org/jacekkubacki/projectEulerInPython)
+| script | result |
+| ------ | ------ |
+| myUtils_tests.py | [![Build Status](https://travis-ci.org/jacekkubacki/projectEulerInPython.svg?branch=master)](https://travis-ci.org/jacekkubacki/projectEulerInPython) |
+
