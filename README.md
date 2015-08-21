@@ -19,5 +19,5 @@ It has been suggested to me that it would be nice to use http://travis-ci.org/, 
 
 | script | result |
 | ------ | ------ |
-| _myUtils_tests.py_ | [![Build Status](https://travis-ci.org/jacekkubacki/projectEulerInPython.svg?branch=master)](https://travis-ci.org/jacekkubacki/projectEulerInPython) |
+| _myUtils_test.py_ | [![Build Status](https://travis-ci.org/jacekkubacki/projectEulerInPython.svg?branch=master)](https://travis-ci.org/jacekkubacki/projectEulerInPython) |
 
