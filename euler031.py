@@ -16,8 +16,10 @@ COINS = [200, 100, 50, 20, 10, 5, 2, 1]
 TOTAL = 200
 
 
-# This recursive function will add coins in a descending value order
 def addCoins(currentSum, lastCoin):
+    """Add COINS in a descending value order and return the number of different ways currentSum can be obtained"""
+    # This is a recursive function without any optimization, see Problem 76 for more optimal solution
+    
     result = 0
 
     # too much, not a valid combination
