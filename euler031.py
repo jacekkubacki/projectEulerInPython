@@ -19,7 +19,7 @@ TOTAL = 200
 def addCoins(currentSum, lastCoin):
     """Add COINS in a descending value order and return the number of different ways currentSum can be obtained"""
     # This is a recursive function without any optimization, see Problem 76 for more optimal solution
-    
+
     result = 0
 
     # too much, not a valid combination
@@ -30,7 +30,7 @@ def addCoins(currentSum, lastCoin):
     if currentSum == TOTAL:
         return 1
 
-    # if the last digit is 1, then all remaining coins are 1p
+    # if the last number is 1, then all remaining coins are 1p
     if lastCoin == 1:
         return 1
 
