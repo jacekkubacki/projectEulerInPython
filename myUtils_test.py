@@ -28,6 +28,7 @@ class MyUtilsTest(unittest.TestCase):
         solutions = {'euler007.py': 'Result: 104743',
                      'euler027.py': 'Result: -59231',
                      'euler041.py': 'Result: 7652413',
+                     'euler046.py': 'Result: 5777',
                      'euler058.py': 'Result: 26241'}
         self.runSolutions(solutions)
 
