@@ -7,6 +7,6 @@
 #
 # Find the sum of all the primes below two million.
 
-from myUtils import listOfPrimes
+from my_utils import list_of_primes
 
-print ("Result:", sum(listOfPrimes(2000000)))
+print ("Result:", sum(list_of_primes(2000000)))

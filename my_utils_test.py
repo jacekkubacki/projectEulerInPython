@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Simple tests to make sure that myUtils.py changes don't cause any regressions."""
+"""Simple tests to make sure that my_utils.py changes don't cause any regressions."""
 
 import unittest
 import subprocess

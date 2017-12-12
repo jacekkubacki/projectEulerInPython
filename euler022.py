@@ -16,7 +16,7 @@
 # What is the total of all the name scores in the file?
 
 import string
-from myUtils import dequote, wordValue
+from my_utils import dequote, word_value
 
 # with statement with file object: opens file in 'r' mode, closes file on exit
 with open('p022_names.txt') as f:
@@ -27,6 +27,6 @@ listOfNames.sort()
 
 result = 0
 for i in range (0, len(listOfNames)):
-    result += (i + 1) * wordValue(listOfNames[i])
+    result += (i + 1) * word_value(listOfNames[i])
 
 print ("Result:", result)

@@ -7,14 +7,14 @@
 #
 # What is the 10 001st prime number?
 
-from myUtils import isPrime
+from my_utils import is_prime
 
 primesFound = 2 # 2, 3
 currentNumber = 3
 
 while primesFound < 10001:
     currentNumber += 2
-    if isPrime(currentNumber):
+    if is_prime(currentNumber):
         primesFound += 1
 
 print ("Result:", currentNumber)

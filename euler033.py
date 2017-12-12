@@ -20,7 +20,7 @@
 
 from collections import Counter
 from functools import reduce
-from myUtils import primeFactors
+from my_utils import list_of_prime_factors
 
 numerator = 1
 denominator = 1
@@ -48,8 +48,8 @@ for x in range (1, 10):
                 denominator *= b
 
 # reduce fraction by looking at the prime Factors
-n = Counter(primeFactors(numerator))
-d = Counter(primeFactors(denominator))
+n = Counter(list_of_prime_factors(numerator))
+d = Counter(list_of_prime_factors(denominator))
 reducedDenominator = list((d - n).elements())
 # multiply all remaining factors in denominator
 print ("Result:", reduce(lambda a, b: a * b, reducedDenominator))

@@ -7,6 +7,6 @@
 #
 # What is the largest prime factor of the number 600851475143 ?
 
-from myUtils import primeFactors
+from my_utils import list_of_prime_factors
 
-print ("Result:", max(primeFactors(600851475143)))
+print ("Result:", max(list_of_prime_factors(600851475143)))

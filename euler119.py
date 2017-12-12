@@ -33,7 +33,7 @@
 #   the maximum sum of digits for n-digits number is n*9
 # - go to (*) and repeat until 30th term has been found
 
-from myUtils import sumOfDigits
+from my_utils import sum_of_digits
 
 powers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 a = []
@@ -45,7 +45,7 @@ while len(a) < 30:
     number = min (powers[3:])
     index  = powers.index(number)
     
-    if sumOfDigits(number) == index:
+    if sum_of_digits(number) == index:
         if len(str(number)) == 1:
             pass  # ignore 1-digit numbers
         else:

@@ -14,10 +14,4 @@ I started this project with IDLE, then I switched to Interactive Editor for Pyth
 I commit the code using different methods: command-line git, git integration in PyCharm or GitHub Desktop app.
 
 ## Tests
-Tests for _myUtils.py_ were initially written using pytest, currently I'm using unittest.
-It has been suggested to me that it would be nice to use http://travis-ci.org/, so here it is.
-
-| script | result |
-| ------ | ------ |
-| _myUtils_test.py_ | [![Build Status](https://travis-ci.org/jacekkubacki/projectEulerInPython.svg?branch=master)](https://travis-ci.org/jacekkubacki/projectEulerInPython) |
-
+Tests for _my_utils.py_ were initially written using pytest. Currently I'm using unittest module for that.

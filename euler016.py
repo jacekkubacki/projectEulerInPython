@@ -7,6 +7,6 @@
 #
 # What is the sum of the digits of the number 21000?
 
-from myUtils import sumOfDigits
+from my_utils import sum_of_digits
 
-print("Result:", sumOfDigits(pow(2, 1000)))
+print("Result:", sum_of_digits(pow(2, 1000)))

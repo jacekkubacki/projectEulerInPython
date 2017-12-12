@@ -18,7 +18,7 @@
 # If one complete new layer is wrapped around the spiral above, a square spiral with side length 9 will be formed.
 # If this process is continued, what is the side length of the square spiral for which the ratio of primes along both diagonals first falls below 10%?
 
-from myUtils import isPrime
+from my_utils import is_prime
 
 numbersOnDiagonals = 1  # '1' is on both diagonals
 numberOfPrimes = 0      # no prime numbers yet
@@ -30,7 +30,7 @@ while True:
     # check numbers on three diagonals
     for i in range(0, 3):
         currentNumber += step
-        if isPrime(currentNumber):
+        if is_prime(currentNumber):
             numberOfPrimes += 1
     # skip right bottom diagonal
     currentNumber += step

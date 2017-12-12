@@ -11,7 +11,7 @@
 #
 # What 12-digit number do you form by concatenating the three terms in this sequence?
 
-from myUtils import listOfPrimes
+from my_utils import list_of_primes
 
 # I didn't know what's better: to write my own function or to use an existing one?
 # I decided to commit the solution that uses itertools module
@@ -21,7 +21,7 @@ from itertools import permutations
 
 from sys import exit
 
-primes = set (listOfPrimes(10000))
+primes = set (list_of_primes(10000))
 
 for p in primes:
     if p < 1000:

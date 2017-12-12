@@ -1,7 +1,0 @@
-language: python
-python:
-  - "3.3"
-  - "3.4"
-script:
-  - python myUtils_test.py
-

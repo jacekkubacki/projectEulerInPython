@@ -12,7 +12,7 @@
 #
 # Using words.txt (right click and 'Save Link/Target As...'), a 16K text file containing nearly two-thousand common English words, how many are triangle words?
 
-from myUtils import dequote, wordValue
+from my_utils import dequote, word_value
 
 with open('p042_words.txt') as f:
     data = f.read()
@@ -23,7 +23,7 @@ listOfWords = list(map(dequote, data.split(',')))
 
 result = 0
 for word in listOfWords:
-    value = wordValue(word)
+    value = word_value(word)
 
     while value > triangleNumbers[-1]:
         # we need more tringle numbers in 'triangleNumbers'

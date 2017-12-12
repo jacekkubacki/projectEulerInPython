@@ -8,6 +8,6 @@
 #
 # Considering natural numbers of the form, a^b, where a, b < 100, what is the maximum digital sum?
 
-from myUtils import sumOfDigits
+from my_utils import sum_of_digits
 
-print ("Result:", max([sumOfDigits(a**b) for a in range(1, 100+1) for b in range(1, 100+1)]))
+print ("Result:", max([sum_of_digits(a ** b) for a in range(1, 100 + 1) for b in range(1, 100 + 1)]))

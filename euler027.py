@@ -48,7 +48,7 @@
 # * b must be prime > 2
 # * b >= 2 - a
 
-from myUtils import isPrime, listOfPrimes
+from my_utils import is_prime, list_of_primes
 from bisect import bisect_left
 
 # for a = 1 < 1000 and b = 41 < 1000 the quadratic expression n^2 + n + 41 returns 40 primes for the consecutive values n = 0 to 39
@@ -56,7 +56,7 @@ maxConsecutivePrimes = 40
 result = 1 * 41
 
 # b is prime > 2
-primes = listOfPrimes(1000)[1:]
+primes = list_of_primes(1000)[1:]
 
 # a must be odd
 for a in range (-999, 1000, 2):
@@ -71,7 +71,7 @@ for a in range (-999, 1000, 2):
         consecutivePrimes = 1
 
         while True:
-            if isPrime (n * n + a * n + b):
+            if is_prime (n * n + a * n + b):
                 consecutivePrimes += 1
             else:
                 break

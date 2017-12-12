@@ -12,10 +12,10 @@
 #
 # Which prime, below one-million, can be written as the sum of the most consecutive primes?
 
-from myUtils import listOfPrimes
+from my_utils import list_of_primes
 
 limit = 1000000
-primeList = listOfPrimes(limit)
+primeList = list_of_primes(limit)
 primeSet = set (primeList)
 
 maxSize = 21  # 21 consecutive primes...

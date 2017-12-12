@@ -11,14 +11,14 @@
 #
 # Evaluate the sum of all the amicable numbers under 10000.
 
-from myUtils import listOfDivisors
+from my_utils import list_of_divisors
 
 # brute force
 result = 0
 
 for a in range(4, 10000):
-    b = sum(listOfDivisors(a))
-    if a == sum(listOfDivisors(b)) and a != b:
+    b = sum(list_of_divisors(a))
+    if a == sum(list_of_divisors(b)) and a != b:
         result += a
 
 print ("Result:", result)

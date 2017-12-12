@@ -14,7 +14,7 @@
 #
 # Find the sum of all the positive integers which cannot be written as the sum of two abundant numbers.
 
-from myUtils import arithmeticSum, listOfDivisors
+from my_utils import arithmetic_sum, list_of_divisors
 from bisect import bisect
 
 # no need to check numbers >= 28123
@@ -23,7 +23,7 @@ limit = 28123
 abundantNumbers = []
 # find all abundant numbers < limit, 12 is the smallest one
 for n in range(12, limit):
-    if sum(listOfDivisors(n)) > n:
+    if sum(list_of_divisors(n)) > n:
         abundantNumbers.append(n)
 
 # to make sure sums are unique set will be used
@@ -35,7 +35,7 @@ for i in range(0, len(abundantNumbers)):
     for j in range(i, bisect(abundantNumbers, limit - abundantNumbers[i])):
         sumOfTwoAbundants.add(abundantNumbers[i] + abundantNumbers[j])
 
-sumOfAllNumbers = int(arithmeticSum(1, 1, limit))
+sumOfAllNumbers = int(arithmetic_sum(1, 1, limit))
 
 # The sum of all the positive integers which cannot be written as the sum of two abundant numbers
 # equals to the sum of all numbers from 1 to 28123 minus the sum of all the positive integers which CAN be written as the sum of two abundant numbers.

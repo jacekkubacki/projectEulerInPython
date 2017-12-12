@@ -32,7 +32,7 @@
 # Likewise there are (b+1) ways to choose how many q's to include, etc.
 # So the number of factors for your number would be (a+1)*(b+1)*...(k+1).
 
-from myUtils import primeFactors
+from my_utils import list_of_prime_factors
 from collections import Counter
 
 triangleNumber = 1
@@ -42,7 +42,7 @@ while True:
     triangleNumber += naturalNumber
 
     numberOfFactors = 1
-    for exp in Counter(primeFactors(triangleNumber)).values():
+    for exp in Counter(list_of_prime_factors(triangleNumber)).values():
         numberOfFactors *= (exp + 1)
 
     if numberOfFactors > 500:

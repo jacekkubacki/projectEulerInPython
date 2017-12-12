@@ -15,7 +15,7 @@
 # - ignore it if it is already in the 'circularPrimes' set
 # - if all the rotations are in the 'primes' set then add all of them to 'circularPrimes' set
 
-from myUtils import listOfPrimes
+from my_utils import list_of_primes
 
 
 def listOfRotations (n):
@@ -29,7 +29,7 @@ def listOfRotations (n):
     return result
     
 circularPrimes = set([])
-primes = set(listOfPrimes(1000000))
+primes = set(list_of_primes(1000000))
 
 for p in primes:
     if p in circularPrimes:

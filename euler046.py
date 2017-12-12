@@ -16,7 +16,7 @@
 #
 # What is the smallest odd composite that cannot be written as the sum of a prime and twice a square?
 
-from myUtils import isPrime
+from my_utils import is_prime
 
 primes = [3, 5, 7, 11, 13, 17, 19, 23, 29, 31]
 double_squares = [2, 8, 18, 32]
@@ -30,7 +30,7 @@ while True:
         double_squares.append(2*(len(double_squares) + 1)**2)
 
     # if it is a prime number then add it to the list
-    if isPrime(number):
+    if is_prime(number):
         primes.append(number)
         continue
     else:

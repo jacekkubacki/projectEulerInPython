@@ -14,7 +14,7 @@
 # So it is enough to check 7- and 4-digit pandigital numbers (2143 is a 4-digit prime pandigital number).
 
 from itertools import permutations
-from myUtils import isPrime
+from my_utils import is_prime
 import sys
 
 for n in [7, 4]:
@@ -22,6 +22,6 @@ for n in [7, 4]:
     digits = "".join([str(i) for i in range (n, 0, -1)])
 
     for number in [int(''.join(p)) for p in permutations(digits)]:
-        if isPrime(number):
+        if is_prime(number):
             print ("Result:", number)
             sys.exit()
