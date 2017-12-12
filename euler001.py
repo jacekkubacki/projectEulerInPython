@@ -11,8 +11,8 @@
 # Solution:
 # Instead of using a loop we can simply find the sums of arithmetic progressions
 # http://en.wikipedia.org/wiki/Arithmetic_progression
-# Just add the sum for multiplies of 3 and sum for multiplies of 5
-# and subtract sum for multiplies of 15 (because numbers such as 15 have been added twice: as a multiply of 3 and as a multiply of 5)
+# Just add the sum for multiplies of 3 and sum for multiplies of 5 and subtract sum for multiplies of 15
+# (because numbers such as 15 have been added twice: as a multiply of 3 and as a multiply of 5)
 
 from my_utils import arithmetic_sum
 
@@ -22,4 +22,4 @@ s3 = arithmetic_sum(3, 3, (limit - 1) // 3)
 s5 = arithmetic_sum(5, 5, (limit - 1) // 5)
 s15 = arithmetic_sum(15, 15, (limit - 1) // 15)
 
-print ("Result:", int(s3 + s5 - s15))
+print("Result:", int(s3 + s5 - s15))
