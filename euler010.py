@@ -9,4 +9,4 @@
 
 from my_utils import list_of_primes
 
-print ("Result:", sum(list_of_primes(2000000)))
+print("Result:", sum(list_of_primes(2000000)))

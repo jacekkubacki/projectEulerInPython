@@ -22,9 +22,9 @@
 # What is z(n)?
 # z(n) = y(n) - x(n) = ... = z(n-1) + 2*n*sum(1..n-1)
 
-z = 0 # z(1)
+z = 0   # z(1)
 
-for n in range (2, 100+1): # z(2)..z(100)
-    z += 2*n*sum(range(1,n))
+for n in range(2, 100+1):  # z(2)..z(100)
+    z += 2 * n * sum(range(1, n))
 
-print ("Result:", z)
+print("Result:", z)

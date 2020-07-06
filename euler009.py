@@ -21,16 +21,17 @@
 # Let a be the shorter cathetus.
 # a = 1000 - b - c
 
+
 class BreakInnerLoop(Exception):
     pass
 
+
 try:
-    for c in range (334, 500): 
-        for b in range (c, (1000-c)//2, -1):
+    for c in range(334, 500):
+        for b in range(c, (1000-c)//2, -1):
             a = 1000 - c - b
             if c * c == a * a + b * b:
-                print ("Result:", a*b*c)
+                print("Result:", a*b*c)
                 raise BreakInnerLoop
-
 except BreakInnerLoop:
     pass

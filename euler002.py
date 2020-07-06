@@ -16,10 +16,9 @@ result = 0
 
 while b < 4000000:
     # find next term (b)
-    a,b = b,a+b
+    a, b = b, a+b
     # add even numbers only
     if b % 2 == 0:
         result += b
         
-print ("Result:", result)
-    
+print("Result:", result)

@@ -9,7 +9,7 @@
 
 from my_utils import is_prime
 
-primesFound = 2 # 2, 3
+primesFound = 2
 currentNumber = 3
 
 while primesFound < 10001:
@@ -17,4 +17,4 @@ while primesFound < 10001:
     if is_prime(currentNumber):
         primesFound += 1
 
-print ("Result:", currentNumber)
+print("Result:", currentNumber)

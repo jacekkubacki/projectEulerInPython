@@ -1,0 +1,13 @@
+Clone repository using ssh:
+git clone ssh://git@github.com/jacekkubacki/projectEulerInPython.git
+
+Set git user.name and user.email:
+git config --global user.name jacekkubacki
+git config --global user.email jacekkubacki@users.noreply.github.com
+
+To change the name and/or email address recorded in existing commits, 
+you must rewrite the entire history of your Git repository:
+https://docs.github.com/en/github/using-git/changing-author-info
+
+To push the changes set origin first:
+git remote set-url origin git@github.com:jacekkubacki/projectEulerInPython.git
