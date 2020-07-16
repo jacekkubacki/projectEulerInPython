@@ -27,6 +27,7 @@ class MyUtilsTest(unittest.TestCase):
     def test_isPrime(self):
         solutions = {'euler007.py': 'Result: 104743',
                      'euler027.py': 'Result: -59231',
+                     'euler037.py': 'Result: 748317',
                      'euler041.py': 'Result: 7652413',
                      'euler046.py': 'Result: 5777',
                      'euler058.py': 'Result: 26241'}
@@ -63,6 +64,7 @@ class MyUtilsTest(unittest.TestCase):
         solutions = {'euler022.py': 'Result: 871198282',
                      'euler042.py': 'Result: 162'}
         self.runSolutions(solutions)
+
 
 if __name__ == '__main__':
 
