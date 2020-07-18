@@ -18,12 +18,10 @@
 #
 # NOTE: Once the chain starts the terms are allowed to go above one million.
 
-
-# seqLength will contain the length of Collatz sequence for all numbers < 1000000
-seqLength = [0, 1]
+collatz_sequence_length = [0, 1]
 
 # check every number < 1000000 starting with 2
-for number in range (2, 1000000):
+for number in range(2, 1000000):
     steps = 0
     current = number
 
@@ -33,11 +31,12 @@ for number in range (2, 1000000):
             # apply the rule for even numbers
             current //= 2
             if current < number:
-                # the length of the sequence has already been calculated
-                seqLength.append(seqLength[current] + steps)
+                # the length of this sequence has already been calculated
+                # add it to the list and check the next number
+                collatz_sequence_length.append(collatz_sequence_length[current] + steps)
                 break
         else:
             # apply the rule for odd numbers
             current = 3 * current + 1
 
-print ("Result:", seqLength.index(max(seqLength)))
+print("Result:", collatz_sequence_length.index(max(collatz_sequence_length)))

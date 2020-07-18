@@ -20,9 +20,9 @@ import calendar
 
 result = 0
 
-for y in range (1901, 2000 + 1):
-    for m in range (1, 12 + 1):
+for y in range(1901, 2000 + 1):
+    for m in range(1, 12 + 1):
         if calendar.weekday(y, m, 1) == calendar.SUNDAY:
             result += 1
 
-print ("Result:", result)
+print("Result:", result)

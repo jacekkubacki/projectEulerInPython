@@ -11,4 +11,5 @@
 # Find the sum of the digits in the number 100!
 
 import math
-print ("Result:", sum(map(int, list(str(math.factorial(100))))))
+
+print("Result:", sum(map(int, list(str(math.factorial(100))))))

@@ -18,7 +18,7 @@ hundreds = [len(s)-1 for s in ['', 'one hundred', 'two hundred', 'three hundred'
 
 result = 0
 
-for number in range (1, 1000):
+for number in range(1, 1000):
     n = number
 
     # hundreds
@@ -28,7 +28,7 @@ for number in range (1, 1000):
             # 100, 200, 300, ...
             continue
         else:
-            # add 'and' for n hundred AND something
+            # add 'and' for X hundred AND something
             result += len('and')
 
     # tens
@@ -36,8 +36,8 @@ for number in range (1, 1000):
     if n // 10 > 1:
         result += tens[n//10]
         # if i % 10 != 0 then add '-'
+    # teens
     elif n // 10 == 1:
-        #teens
         result += teens[n%10]
         continue
 
@@ -47,4 +47,4 @@ for number in range (1, 1000):
 
 result += len('one') + len('thousand')
 
-print ("Result:", result)
+print("Result:", result)

@@ -32,21 +32,24 @@
 # Likewise there are (b+1) ways to choose how many q's to include, etc.
 # So the number of factors for your number would be (a+1)*(b+1)*...(k+1).
 
-from my_utils import list_of_prime_factors
 from collections import Counter
 
-triangleNumber = 1
-naturalNumber  = 2
+from my_utils import list_of_prime_factors
+
+triangle_number = 1
+natural_number = 2
+threshold = 500
 
 while True:
-    triangleNumber += naturalNumber
+    triangle_number += natural_number
 
-    numberOfFactors = 1
-    for exp in Counter(list_of_prime_factors(triangleNumber)).values():
-        numberOfFactors *= (exp + 1)
+    number_of_factors = 1
+    for exp in Counter(list_of_prime_factors(triangle_number)).values():
+        number_of_factors *= (exp + 1)
 
-    if numberOfFactors > 500:
-        print ("Result:", triangleNumber)
+    if number_of_factors > threshold:
         break
 
-    naturalNumber += 1
+    natural_number += 1
+
+print("Result:", triangle_number)
