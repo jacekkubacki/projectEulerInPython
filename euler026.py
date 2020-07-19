@@ -18,13 +18,13 @@
 #
 # Find the value of d < 1000 for which 1/d contains the longest recurring cycle in its decimal fraction part.
 
-def unitFraction(denominator):
+
+def unit_fraction(denominator):
     """ Return length of recurring cycle """
     # assumption: denominator > 1
-
     dividend, divisor = 1, denominator
     # list of (quotient, reminder)
-    quotientReminder = []
+    quotient_reminder = []
 
     while True:
         dividend *= 10
@@ -33,22 +33,22 @@ def unitFraction(denominator):
         if reminder == 0:
             # no recurring cycle
             return 0
-        if (quotient, reminder) in quotientReminder:
-            # recurring cycle found, current index is len(quotientReminder)
-            return len(quotientReminder) - quotientReminder.index((quotient, reminder))
+        if (quotient, reminder) in quotient_reminder:
+            # recurring cycle found, current index is len(quotient_reminder)
+            return len(quotient_reminder) - quotient_reminder.index((quotient, reminder))
         else:
-            quotientReminder.append((quotient, reminder))
+            quotient_reminder.append((quotient, reminder))
 
         # new dividend for next iteration
         dividend = reminder
 
 # 1/7	= 	0.(142857)
 denominator = 7
-cycleLength = 6
+cycle_length = 6
 
 for d in range(999, denominator, -1):
-    if unitFraction(d) > cycleLength:
+    if unit_fraction(d) > cycle_length:
         denominator = d
-        cycleLength = unitFraction(d)
+        cycle_length = unit_fraction(d)
 
-print ("Result:", denominator)
+print("Result:", denominator)

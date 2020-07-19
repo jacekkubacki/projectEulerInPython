@@ -33,4 +33,4 @@ while b < 10**(1000-1):  # 10^(n-1) contains n digits
     index += 1
     a, b = b, a+b
         
-print ("Result:", index)
+print("Result:", index)

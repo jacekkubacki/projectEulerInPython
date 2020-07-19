@@ -18,18 +18,17 @@
 # Brute force :)
 # All 1-, 2-, 3-, 4- and 5-digits numbers should be checked, as 9^5 = 59049.
 # For 6-digits numbers the maximum sum is 6*9^5 = 354294, so there is no need to check numbers bigger than that.
-# (we can even analyze a bit further and note that as a consequence there is no need to check numbers bigger than 3^5 + 5*9^5 and so on...)
 
-fifthPowers = [pow(i, 5) for i in range(0, 10)]
-
+fifth_powers = [pow(i, 5) for i in range(0, 10)]
 result = 0
-for number in range(2, 6*fifthPowers[9]):
+
+for number in range(2, 6 * fifth_powers[9]):
     s = 0
     n = number
     while n > 0:
-        s += fifthPowers[n % 10]
+        s += fifth_powers[n % 10]
         n //= 10
     if s == number:
         result += number
     
-print ("Result:", result)
+print("Result:", result)

@@ -23,27 +23,27 @@
 
 from math import factorial
 
-remainingDigits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+remaining_digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 index = 1000000  # index of a permutation we are looking for
-currentIndex = 1
+current_index = 1
 result = []
 
 for n in range(9, -1, -1):
-    # start with the first digit in 'remainingDigits'
-    digitIndex = 0
+    # start with the first digit in 'remaining_digits'
+    digit_index = 0
     # there are n! permutation with that digit on current position
     f = factorial(n)
 
-    while currentIndex + f <= index:
+    while current_index + f <= index:
         # the permutation we are looking for doesn't use the current digit on current position
         # update the index
-        currentIndex += f
+        current_index += f
         # and check the next digit
-        digitIndex += 1
+        digit_index += 1
 
     # add current digit to 'result'
-    result.append(remainingDigits[digitIndex])
-    # and remove it from 'remainingDigits' as it will not be used again
-    del remainingDigits[digitIndex]
+    result.append(remaining_digits[digit_index])
+    # and remove it from 'remaining_digits' as it will not be used again
+    del remaining_digits[digit_index]
 
-print ("Result:", ''.join(map(str, result)))
+print("Result:", ''.join(map(str, result)))

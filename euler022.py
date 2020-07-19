@@ -15,18 +15,16 @@
 #
 # What is the total of all the name scores in the file?
 
-import string
 from my_utils import dequote, word_value
 
-# with statement with file object: opens file in 'r' mode, closes file on exit
 with open('p022_names.txt') as f:
     data = f.read()
 
-listOfNames = list(map(dequote, data.split(',')))
-listOfNames.sort()
+list_of_names = list(map(dequote, data.split(',')))
+list_of_names.sort()
 
 result = 0
-for i in range (0, len(listOfNames)):
-    result += (i + 1) * word_value(listOfNames[i])
+for i in range(0, len(list_of_names)):
+    result += (i + 1) * word_value(list_of_names[i])
 
-print ("Result:", result)
+print("Result:", result)

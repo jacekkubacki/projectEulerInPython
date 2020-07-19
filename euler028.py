@@ -28,9 +28,9 @@ step = 2
 result = number
 
 while number < 1001 * 1001:
-    for i in range (0,4):
+    for i in range(0, 4):
         number += step
         result += number
     step += 2
 
-print ("Result:", result)
+print("Result:", result)

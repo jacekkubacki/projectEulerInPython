@@ -13,12 +13,10 @@
 
 from my_utils import list_of_divisors
 
-# brute force
 result = 0
-
 for a in range(4, 10000):
     b = sum(list_of_divisors(a))
     if a == sum(list_of_divisors(b)) and a != b:
         result += a
 
-print ("Result:", result)
+print("Result:", result)

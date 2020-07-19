@@ -25,7 +25,7 @@
 
 # Solution:
 # Let f(n) = n^2 + a*n + b.
-# For a = 1 and b = 41 f(n) produces 40 primes for the consecutive values n = 0 to 39.
+# For a = 1 and b = 41 f(n) produces 40 primes for the consecutive values of n = 0 to 39.
 #
 # f(0) = b, so to find coefficients that produce >= 40 primes b must be prime.
 #
@@ -48,18 +48,20 @@
 # * b must be prime > 2
 # * b >= 2 - a
 
-from my_utils import is_prime, list_of_primes
 from bisect import bisect_left
 
-# for a = 1 < 1000 and b = 41 < 1000 the quadratic expression n^2 + n + 41 returns 40 primes for the consecutive values n = 0 to 39
-maxConsecutivePrimes = 40
+from my_utils import is_prime, list_of_primes
+
+# for a = 1 < 1000 and b = 41 < 1000 the quadratic expression n^2 + n + 41 returns 40 primes
+# for the consecutive values n = 0 to 39
+max_consecutive_primes = 40
 result = 1 * 41
 
 # b is prime > 2
 primes = list_of_primes(1000)[1:]
 
 # a must be odd
-for a in range (-999, 1000, 2):
+for a in range(-999, 1000, 2):
 
     # bisect_left locate the insertion point to maintain sorted order
     # we will use it to find the index of a first element >= 2 - a in prime list to make sure that b >= 2 - a
@@ -68,17 +70,17 @@ for a in range (-999, 1000, 2):
         # f(0) = b, b is guaranteed to be prime
         # let's start from n = 1
         n = 1
-        consecutivePrimes = 1
+        consecutive_primes = 1
 
         while True:
             if is_prime (n * n + a * n + b):
-                consecutivePrimes += 1
+                consecutive_primes += 1
             else:
                 break
             n += 1
 
-        if maxConsecutivePrimes < consecutivePrimes:
-            maxConsecutivePrimes = consecutivePrimes
+        if max_consecutive_primes < consecutive_primes:
+            max_consecutive_primes = consecutive_primes
             result = a * b
 
-print ("Result:", result)
+print("Result:", result)
